@@ -1,0 +1,24 @@
+{
+  "name": "pokefave-progressive",
+  "version": "1.0.0",
+  "description": "What's your favorite Pokémon? (Progressive Enhancement Version)",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefgodesky/pokefave-progressive.git"
+  },
+  "homepage": "https://github.com/jefgodesky/pokefave-progressive",
+  "bugs": {
+    "url": "https://github.com/jefgodesky/pokefave-progressive/issues"
+  },
+  "author": {
+    "name": "Jason Godesky",
+    "email": "jason@godesky.net",
+    "url": "https://jason.godesky.net"
+  },
+  "license": "GPL-3.0-only",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
