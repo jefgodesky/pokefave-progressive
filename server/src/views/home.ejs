@@ -12,7 +12,7 @@
       </nav>
       <div class="pokemon-list">
         <% for (const poke of pokemon) { %>
-        <article<% if (poke.types.length > 0) { %> class="<%= poke.types[0] %>"<% } %>>
+        <article<% if (poke.types.length > 0) { %> class="<%= poke.types[0] %>"<% } %> data-pokedex="<%= poke.pokedex %>">
           <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/<%= poke.pokedex %>.png" alt="<%= poke.name %>" />
           <p class="pokedex">#<%= poke.pokedex.toString().padStart(3, '0') %></p>
           <h2><%= poke.name %></h2>
