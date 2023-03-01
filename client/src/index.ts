@@ -7,6 +7,6 @@ import { selector as faveSelector } from './fave/index'
 
   if (enhancements.fave.length > 0) {
     const init = await import('./fave/index')
-    await init.default(enhancements.fave)
+    init.default(enhancements.fave)
   }
 })().then(() => {}).catch(() => {})

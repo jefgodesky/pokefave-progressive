@@ -1,6 +1,9 @@
-extension: ['ts']
-spec:
-  - 'server/src/**/*.spec.ts'
-loader: 'ts-node/esm'
+extension:
+  - ts
+spec: "server/src/**/*.spec.ts"
 require:
-  - 'ts-node/register'
+  - ts-node/register
+  - jsdom-global/register
+node-option:
+  - "experimental-specifier-resolution=node"
+  - "loader=ts-node/esm"
