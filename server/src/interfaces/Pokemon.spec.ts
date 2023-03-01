@@ -3,7 +3,7 @@ import { expect } from 'chai'
 import { isPokemon } from './Pokemon'
 
 describe('isPokemon', () => {
-  const fn = () => {}
+  const fn = (): void => {}
   const pokedex = 1
   const name = 'Bulbasaur'
   const types = ['grass', 'poison']

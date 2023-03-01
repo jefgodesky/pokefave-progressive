@@ -12,7 +12,7 @@ const isPokemon = (obj: any): obj is Pokemon => {
   if (pokedex === undefined || typeof pokedex !== 'number') return false
   if (name === undefined || typeof name !== 'string') return false
   if (types === undefined || !Array.isArray(types)) return false
-  return types.reduce((acc, curr) => acc && typeof curr === 'string', true)
+  return types.reduce((acc: boolean, curr) => acc && typeof curr === 'string', true)
 }
 
 export default Pokemon
