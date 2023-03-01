@@ -1,6 +1,6 @@
 import 'mocha'
 import { expect } from 'chai'
-import { isPokemon } from './Pokemon'
+import { isPokemon } from './index'
 
 describe('isPokemon', () => {
   const fn = (): void => {}
