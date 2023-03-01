@@ -51,17 +51,20 @@ nav {
     margin: 0 1em 0 0;
   }
 
-  button {
+  a {
     appearance: none;
     border: 0;
     background: #fff;
     border-radius: vars.$corner-radius;
     box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.5);
+    color: #000;
     cursor: pointer;
+    display: inline-block;
     font-size: 0.75em;
     font-weight: 700;
     margin: 0 0.5em 0 0;
-    padding: 0.5em 1em;
+    padding: 0.3em 1em;
+    text-decoration: none;
 
     &:hover {
       background: #ffffe0;

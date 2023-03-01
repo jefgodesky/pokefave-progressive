@@ -7,8 +7,8 @@
     <main>
       <nav>
         <p>Sort by</p>
-        <button<% if (sort === 'pokedex') { %> class="active"<% } %>>Pokédex</button>
-        <button<% if (sort === 'name') { %> class="active"<% } %>>A-Z</button>
+        <a href="/" <% if (sort === 'pokedex') { %> class="active"<% } %>>Pokédex</a>
+        <a href="/by-name" <% if (sort === 'name') { %> class="active"<% } %>>A-Z</a>
       </nav>
       <div class="pokemon-list">
         <% for (const poke of pokemon) { %>
