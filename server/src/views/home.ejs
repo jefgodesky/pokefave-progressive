@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head') %>
+  </head>
+  <body>
+    <nav>
+      <p>Sort by</p>
+      <button<% if (sort === 'pokedex') { %> class="active"<% } %>>Pokédex</button>
+      <button<% if (sort === 'name') { %> class="active"<% } %>>A-Z</button>
+    </nav>
+    <div class="pokemon-list">
+      <% for (const poke of pokemon) { %>
+      <article class="<%= poke.types.join(' ') %>">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/<%= poke.pokedex %>.png" alt="<%= poke.name %>" />
+        <p class="pokedex">#<%= poke.pokedex %></p>
+        <h2><%= poke.name %></h2>
+        <ul class="types">
+          <% for (const type of poke.types) { %>
+          <li>
+            <img src="/types/<%= type %>.svg" alt="<%= type %> type Pokémon" />
+          </li>
+          <% } %>
+        </ul>
+      </article>
+      <% } %>
+    </div>
+    <%- include('partials/js') %>
+  </body>
+</html>

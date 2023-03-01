@@ -2,6 +2,7 @@
   "name": "pokefave-progressive",
   "version": "1.0.0",
   "description": "What's your favorite Pokémon? (Progressive Enhancement Version)",
+  "type": "module",
   "private": true,
   "repository": {
     "type": "git",
@@ -19,7 +20,13 @@
   "license": "GPL-3.0-only",
   "main": "server/build/index.js",
   "scripts": {
+    "start": "node server/build/index.js",
     "test": "npm-run-all server:test",
+    "server:build": "npm-run-all server:clear server:compile server:templates server:assets",
+    "server:clear": "rm -Rf server/build",
+    "server:assets": "mkdir server/build/public && cp -R server/src/assets/* server/build/public",
+    "server:templates": "cp -R server/src/views server/build",
+    "server:compile": "npx tsc --project server/tsconfig.json",
     "server:lint": "ts-standard --project server/tsconfig.json",
     "server:mocha": "mocha -r ts-node/register server/src/**/*.spec.ts",
     "server:test": "npm-run-all server:lint server:mocha"
