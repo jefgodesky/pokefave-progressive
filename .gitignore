@@ -2,6 +2,7 @@
 node_modules
 
 # Built files
+client/build
 server/build
 
 # IDE configuration
