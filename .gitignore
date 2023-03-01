@@ -1,5 +1,11 @@
 # Dependencies
 node_modules
 
+# Built files
+server/build
+
 # IDE configuration
 .idea
+
+# Misc.
+.DS_Store
