@@ -19,7 +19,8 @@
   "license": "GPL-3.0-only",
   "main": "server/build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm-run-all server:test",
+    "server:test": "mocha -r ts-node/register server/src/**/*.spec.ts"
   },
   "dependencies": {
     "@types/express": "^4.17.17",
