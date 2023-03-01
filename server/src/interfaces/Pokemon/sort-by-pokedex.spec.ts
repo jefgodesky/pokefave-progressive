@@ -1,6 +1,6 @@
 import 'mocha'
 import { expect } from 'chai'
-import sortByPokedex from './sort-by-pokedex'
+import sortByPokedex from './sort-by-pokedex.js'
 
 describe('sortByPokedex', () => {
   const pokemon = [

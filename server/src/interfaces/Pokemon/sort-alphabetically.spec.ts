@@ -1,6 +1,6 @@
 import 'mocha'
 import { expect } from 'chai'
-import sortAlphabetically from './sort-alphabetically'
+import sortAlphabetically from './sort-alphabetically.js'
 
 describe('sortAlphabetically', () => {
   const pokemon = [
