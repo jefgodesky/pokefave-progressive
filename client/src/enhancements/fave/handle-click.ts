@@ -9,12 +9,13 @@ export default function (event: MouseEvent, store: Storage = window.localStorage
   const id = article?.getAttribute('data-pokedex') ?? ''
   if (id === '') return
   const isFave = isFaveId(id, store)
+  const faveClasses = ['is-fave', 'animate__animated', 'animate__tada']
 
   if (isFave) {
     removeFave(id, store)
-    if (btn !== null && hasClass(btn,'is-fave')) removeClass(btn,'is-fave')
+    if (btn !== null && hasClass(btn,'is-fave')) removeClass(btn,...faveClasses)
   } else {
     addFave(id, store)
-    if (btn !== null && !hasClass(btn, 'is-fave')) addClass(btn, 'is-fave')
+    if (btn !== null && !hasClass(btn, 'is-fave')) addClass(btn, ...faveClasses)
   }
 }
