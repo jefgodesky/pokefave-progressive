@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from 'express'
+import express, { Request, Response } from 'express'
 import sortAlphabetically from '../interfaces/Pokemon/sort-alphabetically.js'
 import sortByPokedex from '../interfaces/Pokemon/sort-by-pokedex.js'
 import data from '../pokemon.json' assert { type: 'json' }
@@ -6,7 +6,7 @@ import data from '../pokemon.json' assert { type: 'json' }
 const router = express.Router()
 
 const getFavesOnly = (req: Request): boolean => {
-  return req.query.hasOwnProperty('faves')
+  return req.query.faves !== undefined
 }
 
 // GET /
