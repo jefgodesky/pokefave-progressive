@@ -1,4 +1,4 @@
-import { selector as faveSelector } from './fave/index'
+import { selector as faveSelector } from './enhancements/fave/index'
 
 (async (): Promise<void> => {
   const enhancements = {
@@ -6,7 +6,7 @@ import { selector as faveSelector } from './fave/index'
   }
 
   if (enhancements.fave.length > 0) {
-    const init = await import('./fave/index')
+    const init = await import('./enhancements/fave/index')
     init.default(enhancements.fave)
   }
 })().then(() => {}).catch(() => {})
