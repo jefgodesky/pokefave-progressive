@@ -8,7 +8,7 @@
       <nav>
         <p>Sort by</p>
         <a href="/" <% if (sort === 'pokedex') { %> class="active"<% } %>>Pokédex</a>
-        <a href="/by-name" <% if (sort === 'name') { %> class="active"<% } %>>A-Z</a>
+        <a href="/by-name" data-fave-base <% if (sort === 'name') { %> class="active"<% } %>>A-Z</a>
       </nav>
       <div class="pokemon-list">
         <% for (const poke of pokemon) { %>
